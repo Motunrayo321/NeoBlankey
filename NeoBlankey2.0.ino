@@ -118,26 +118,19 @@ void setup() {
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-  int switchMode = analogRead(SWITCH);
-  if (SWITCH == HIGH) {
-    HeatOnI();
-    Heating();
+  
+  HeatOnI();
+  Heating();
 
-    /*
-    CheckIfSafe();
-    delay(1000);
-    */
+  /*
+  CheckIfSafe();
+  delay(1000);
+  */
 
-    HeatStandbyI();
-    delay(120000);
+  HeatStandbyI();
+  delay(120000);
 
-    CheckTime();
-    CheckTemp();
-  }
-
-  else {
-    PowerSwitchOffI();
-  }
+  CheckTime();
+  CheckTemp();
 
 }

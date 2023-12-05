@@ -1,16 +1,5 @@
-void setup() {
-  // put your setup code here, to run once:
-
-}
-
-void loop() {
-  // put your main code here, to run repeatedly:
-
-}
-
-
-
-void PowerSwitchOnI() {
+/*
+  void PowerSwitchOnI() {
   digitalWrite(rLed, HIGH);
   digitalWrite(gLed, HIGH);
   digitalWrite(bLed, HIGH);
@@ -71,3 +60,5 @@ void Heating(); {
   digitalWrite(COIL, HIGH);
   delay(60000);
 }
+
+*/
