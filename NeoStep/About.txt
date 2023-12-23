@@ -1,0 +1,40 @@
+#Description
+This is the embedded code that is set to run on the control system for NeoBlankey 2.0 (NeoStep)
+
+The device is optimised to priotise heat retention over production as neonates are able to produce heat by themselves albeit in insufficient amounts.
+The code achieves this by turninfg the heat on and off at regular intervals (1 minute and 2 respectively) to ensure regular heating independent of temperature reading.
+The temperature sensor is only affixed to monitor the effects and to sound an alarm in case of overheating.
+
+The code controls the timing of the heating by cutting off and turning on power supply thereby generating heat.
+It shows visual alerts about the state of the blanket.
+:- White - just turned on, Green - heating coil on, Blue - heating is temporarily stopped (on standby)
+:- Red - danger, battery is low, temperature is too high or the temperature sensor is not intact
+
+
+#Precautions
+- This code checks the battery percentage with an analog pin, a voltage divider and mapped values to determine the power left in the battery.
+- The device makes a beep (OnTimer) at regular intervals so the user is aware that it is still functional 
+- Prints impoetant values for debugging (To consider removing after testing)
+
+
+#Proposed Improvements
+- Add a thread function so timing is independent of other functions like heating (Or implement NeoTempNTest sketch)
+- Create a different file for the functions and import them into the main file
+- Use a sensitive sensor like DS18B20 instead of DHT 11
+- Include battery check for batteries attached to the heater directly
+
+
+#Undone Improvements
+- Determine Solar panel and charger's specifications
+
+
+
+#Code Format
+- camelCase for variables
+- PascalCase for functions
+
+Variable assignment
+Defining audiovisual functions (light colours and buzzer sound)
+Defining active functions (Heating and standby)
+Defining alarm functions (Time, battery and temperature)
+Variable initiation
